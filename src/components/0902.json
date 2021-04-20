@@ -1,0 +1,46 @@
+{
+  "Version":"3.0",
+  "ImageParameterContentArray":[
+      {
+          "Name":"Test1",
+          "FormatSpecificationNameArray":["FP_1"],
+          "ExpectedBarcodesCount":0,
+          "MaxAlgorithmThreadCount":4,
+          "BarcodeFormatIds":["BF_ALL"],
+          "DPMCodeReadingModes":["DPMCRM_GENERAL"],
+          "GrayscaleTransformationModes":["GTM_ORIGINAL"],
+          "LocalizationModes":["LM_CONNECTED_BLOCKS", "LM_LINES"],
+          "ScaleDownThreshold": 99999,
+          "ImagePreprocessingModes":[
+            {
+                "Mode": "IPM_GENERAL"
+              },
+              {
+                "Mode": "IPM_GRAY_EQUALIZE",
+                "Sensitivity": 5
+              },
+              {
+                "Mode": "IPM_GRAY_SMOOTH",
+                "SmoothBlockSizeX": 3,
+                "SmoothBlockSizeY": 3
+              },
+              {
+                "Mode": "IPM_SHARPEN_SMOOTH",
+                "SharpenBlockSizeX": 3,
+                "SharpenBlockSizeY": 3,
+                "SmoothBlockSizeX": 3,
+                "SmoothBlockSizeY": 3
+              }
+          ],
+          "DeblurLevel":9,
+          "Timeout": 99999
+      }
+  ],
+  "FormatSpecificationArray":[
+      {
+          "Name":"FP_1",
+          "BarcodeFormatIds":["BF_ALL"],
+          "MirrorMode":"MM_Both"
+      }
+  ]
+}
