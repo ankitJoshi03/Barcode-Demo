@@ -108,10 +108,12 @@ class HelloWorld extends React.Component {
                 console.log(results)
                 this.clearMessage();
                 this.appendMessage("Output:");
+                let x=1;
                 for(let result of results){
-                    let bartext=result.barcodeText
-                    let finalbar=bartext.slice(-13);
-                    this.appendMessage(finalbar);
+                    let bartext=result.barcodeText.replace(/[^a-zA-Z0-9]/g,' ');
+                    // let finalbar=bartext.slice(-13);
+                    this.appendMessage(x.toString()+') '+result.barcodeFormatString+': '+bartext);
+                    x=x+1;
                 }
                 }
                 input.value = "";
